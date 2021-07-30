@@ -4,8 +4,12 @@ import Button from '../components/Button';
 import TextInput from '../components/TextInput';
 import { Redirect } from 'react-router-dom';
 
+type SigninProps = {
+loggedIn: boolean;
+handleLogInPassword: (value: string)=> void;
+}
 
-function SignIn(props) {
+function SignIn(props: SinginProps) {
     if(!props.signedUp){
         return (<Redirect to="/SignUp" />);
     }
